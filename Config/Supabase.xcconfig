@@ -1,0 +1,10 @@
+// Supabase project "stacks" (ref: cioepmmgdbyasegnnpjo, us-west-2).
+// SUPABASE_ANON_KEY is the publishable key — safe to ship client-side.
+// Row-level security is the sharing/security mechanism (see
+// stacks-context/engineering/platform-and-stack.md); this key grants no
+// access on its own. Never put the service_role key in this repo.
+//
+// The "$()" inside the URL is not a typo: xcconfig treats a bare "//" as a
+// comment marker even mid-line, so it must be split to survive parsing.
+SUPABASE_URL = https:/$()/cioepmmgdbyasegnnpjo.supabase.co
+SUPABASE_ANON_KEY = sb_publishable_77kQkz4ZV0Fq39vjT8ATUg_KQk0nRhB
