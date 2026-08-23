@@ -1,2 +1,2 @@
 # stacks-ios
-Stacks iOS app (React Native + Expo). Specs and decisions live in nickm717/stacks-context.
+Stacks iOS app (native Swift/SwiftUI). Specs and decisions live in nickm717/stacks-context.
