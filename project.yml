@@ -26,11 +26,19 @@ targets:
     type: application
     platform: iOS
     sources:
-      - App
-      - Features
-      - Models
-      - Services
-      - Resources
+      - path: App
+        excludes:
+          - "**/*.md"
+      - path: Features
+        excludes:
+          - "**/*.md"
+      - path: Models
+        excludes:
+          - "**/*.md"
+      - path: Services
+        excludes:
+          - "**/*.md"
+      - path: Resources
     configFiles:
       Debug: Config/Supabase.xcconfig
       Release: Config/Supabase.xcconfig
