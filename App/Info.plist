@@ -19,5 +19,16 @@
 	<string>$(SUPABASE_URL)</string>
 	<key>SUPABASE_ANON_KEY</key>
 	<string>$(SUPABASE_ANON_KEY)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.nickm717.stacks.auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.nickm717.stacks</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

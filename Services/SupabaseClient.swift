@@ -23,11 +23,15 @@ enum SupabaseConfig {
         }
         return key
     }()
+
+    /// Where the app is reopened when a user taps an email magic link. Must
+    /// match the `CFBundleURLSchemes` entry in `App/Info.plist` and be
+    /// allow-listed in the Supabase dashboard under Auth > URL Configuration.
+    static let authRedirectURL = URL(string: "com.nickm717.stacks://auth-callback")!
 }
 
 extension SupabaseClient {
     /// The app-wide Supabase client, configured against the "stacks" project.
-    /// Auth wiring (Sign in with Apple) lands with STK-4.
     static let shared = SupabaseClient(
         supabaseURL: SupabaseConfig.url,
         supabaseKey: SupabaseConfig.anonKey
