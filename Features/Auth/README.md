@@ -2,11 +2,14 @@
 
 Landed with **STK-4** (Supabase auth in app).
 
-- `SignInView.swift` — the O2 sign-in surface: Sign in with Apple as the
-  system-styled primary action (Apple HIG requires the system button style;
-  see `stacks-context/design/design-decision-log.md`), with email magic link
-  as a secondary path. Session state and both sign-in methods are owned by
+- `SignInView.swift` — the O2 sign-in surface: email magic link, currently
+  the only sign-in method. Session state and the sign-in flow are owned by
   `Services/AuthService.swift`.
+
+Sign in with Apple was implemented and then pulled back out of STK-4's
+scope — no Apple Developer Program account yet. It's tracked separately as
+**STK-34**; the removed implementation (system button, ID-token nonce flow,
+entitlement) is preserved in git history on branch `claude/stk-4-2cyfyl`.
 
 Out of scope here: the rest of the onboarding journey (welcome, profile
 setup, first scan — STK-32) and a `profiles` table / user data model

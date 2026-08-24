@@ -49,7 +49,6 @@ targets:
         MARKETING_VERSION: "0.1.0"
         CURRENT_PROJECT_VERSION: "1"
         INFOPLIST_FILE: App/Info.plist
-        CODE_SIGN_ENTITLEMENTS: App/Stacks.entitlements
     dependencies:
       - package: Supabase
         product: Supabase
