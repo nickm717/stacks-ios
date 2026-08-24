@@ -1,0 +1,54 @@
+name: Stacks
+options:
+  bundleIdPrefix: com.nickm717
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+
+configs:
+  Debug: debug
+  Release: release
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    TARGETED_DEVICE_FAMILY: "1" # iPhone only for the POC — no iPad layout (see DESIGN.md)
+    SUPPORTS_MACCATALYST: "NO"
+
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: "2.0.0"
+
+targets:
+  Stacks:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Features
+      - Models
+      - Services
+      - Resources
+    configFiles:
+      Debug: Config/Supabase.xcconfig
+      Release: Config/Supabase.xcconfig
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nickm717.stacks
+        PRODUCT_NAME: Stacks
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_FILE: App/Info.plist
+    dependencies:
+      - package: Supabase
+        product: Supabase
+
+schemes:
+  Stacks:
+    build:
+      targets:
+        Stacks: all
+    run:
+      config: Debug

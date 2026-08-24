@@ -1,0 +1,28 @@
+included:
+  - App
+  - Features
+  - Models
+  - Services
+
+disabled_rules:
+  - todo
+
+opt_in_rules:
+  - closure_spacing
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - redundant_nil_coalescing
+  - unneeded_parentheses_in_closure_argument
+
+line_length:
+  warning: 120
+  error: 160
+
+identifier_name:
+  min_length: 2
+  excluded:
+    - id
+
+reporter: xcode
